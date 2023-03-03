@@ -1,0 +1,33 @@
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10px auto;
+  padding: 10px;
+  width: 90%;
+}
+
+.modal-content img {
+  width: 100px;
+  height: 100px;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content p {
+  text-align: justify;
+}
