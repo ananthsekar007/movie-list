@@ -4,6 +4,7 @@ import { MovieCard } from "./components/MovieCard";
 import { MovieDetails, movies } from "./data/MoviesData";
 import "./App.css";
 import { DetailsModal } from "./components/DetailsModal";
+import Pagination from "./components/Pagination";
 
 function App() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -16,8 +17,8 @@ function App() {
   return (
     <>
       <NavBar />
-      <div className="movie-grid">
-        {movies.map((movie, index) => (
+      {/* <div className="movie-grid"> */}
+      {/* {movies.map((movie, index) => (
           <MovieCard
             title={movie.title}
             key={index}
@@ -27,8 +28,16 @@ function App() {
               setIsOpen(true);
             }}
           />
-        ))}
-      </div>
+        ))} */}
+      <Pagination
+        data={movies}
+        perPage={12}
+        onMovieClick={(movie) => {
+          setSelectedMovie(movie);
+          setIsOpen(true);
+        }}
+      />
+      {/* </div> */}
       <DetailsModal
         isOpen={isOpen}
         onClose={closeModal}
